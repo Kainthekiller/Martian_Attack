@@ -83,5 +83,8 @@
   <ItemGroup>
     <None Include="Resources\Martian Attack Res\PhotoshopShip.png" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Star.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
