@@ -182,6 +182,7 @@ namespace Martian_Attack
             // 
             this.GameTimer.Enabled = true;
             this.GameTimer.Interval = 20;
+            this.GameTimer.Tick += new System.EventHandler(this.GameTimer_Tick);
             // 
             // Form1
             // 
@@ -204,6 +205,8 @@ namespace Martian_Attack
             this.Margin = new System.Windows.Forms.Padding(6);
             this.Name = "Form1";
             this.Text = "Martian Attack";
+            this.KeyDown += new System.Windows.Forms.KeyEventHandler(this.Form1_KeyDown);
+            this.KeyUp += new System.Windows.Forms.KeyEventHandler(this.Form1_KeyUp);
             ((System.ComponentModel.ISupportInitialize)(this.Star1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.MainPlayer)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.Star2)).EndInit();
