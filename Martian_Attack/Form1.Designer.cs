@@ -87,9 +87,9 @@ namespace Martian_Attack
             // PipeUpTwo
             // 
             this.PipeUpTwo.Image = global::Martian_Attack.Properties.Resources.Pipe;
-            this.PipeUpTwo.Location = new System.Drawing.Point(650, 258);
+            this.PipeUpTwo.Location = new System.Drawing.Point(650, 280);
             this.PipeUpTwo.Name = "PipeUpTwo";
-            this.PipeUpTwo.Size = new System.Drawing.Size(59, 192);
+            this.PipeUpTwo.Size = new System.Drawing.Size(59, 170);
             this.PipeUpTwo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
             this.PipeUpTwo.TabIndex = 16;
             this.PipeUpTwo.TabStop = false;
@@ -99,7 +99,7 @@ namespace Martian_Attack
             this.PipeDownOne.Image = global::Martian_Attack.Properties.Resources.Pipe;
             this.PipeDownOne.Location = new System.Drawing.Point(396, 0);
             this.PipeDownOne.Name = "PipeDownOne";
-            this.PipeDownOne.Size = new System.Drawing.Size(56, 141);
+            this.PipeDownOne.Size = new System.Drawing.Size(56, 153);
             this.PipeDownOne.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
             this.PipeDownOne.TabIndex = 15;
             this.PipeDownOne.TabStop = false;
@@ -109,7 +109,7 @@ namespace Martian_Attack
             this.PipeDownTwo.Image = global::Martian_Attack.Properties.Resources.Pipe;
             this.PipeDownTwo.Location = new System.Drawing.Point(562, 0);
             this.PipeDownTwo.Name = "PipeDownTwo";
-            this.PipeDownTwo.Size = new System.Drawing.Size(53, 141);
+            this.PipeDownTwo.Size = new System.Drawing.Size(53, 171);
             this.PipeDownTwo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
             this.PipeDownTwo.TabIndex = 14;
             this.PipeDownTwo.TabStop = false;
@@ -139,7 +139,7 @@ namespace Martian_Attack
             // 
             this.MainPlayer.BackColor = System.Drawing.Color.Transparent;
             this.MainPlayer.Image = global::Martian_Attack.Properties.Resources.PhotoshopShip;
-            this.MainPlayer.Location = new System.Drawing.Point(142, 122);
+            this.MainPlayer.Location = new System.Drawing.Point(130, 122);
             this.MainPlayer.Margin = new System.Windows.Forms.Padding(2);
             this.MainPlayer.Name = "MainPlayer";
             this.MainPlayer.Size = new System.Drawing.Size(40, 31);
@@ -227,7 +227,7 @@ namespace Martian_Attack
             // Star7
             // 
             this.Star7.Image = global::Martian_Attack.Properties.Resources.Star;
-            this.Star7.Location = new System.Drawing.Point(704, 153);
+            this.Star7.Location = new System.Drawing.Point(704, 152);
             this.Star7.Margin = new System.Windows.Forms.Padding(2);
             this.Star7.Name = "Star7";
             this.Star7.Size = new System.Drawing.Size(30, 19);

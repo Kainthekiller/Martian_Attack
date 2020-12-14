@@ -32,6 +32,7 @@ namespace Martian_Attack
             MainPlayer.Top = MainPlayer.Top + gravity;
             NewPipes();
             PipeMovement();
+            ScoreLabel.Text = ($"Score: {Score}");
 
         }
 
@@ -51,6 +52,7 @@ namespace Martian_Attack
             }
 
         }
+        
 
         public void NewPipes()
         {
@@ -58,18 +60,22 @@ namespace Martian_Attack
             if (PipeUpOne.Left < -50)
             {
                 PipeUpOne.Left = rando.Next(900, 1000);
+                Score++;
             }
             if(PipeUpTwo.Left < -50)
             {
                 PipeUpTwo.Left = rando.Next(700, 800);
+                Score++;
             }
             if (PipeDownOne.Left < -50)
             {
                 PipeDownOne.Left = rando.Next(900, 1000);
+                Score++;
             }
             if (PipeDownTwo.Left < -50)
             {
                 PipeDownTwo.Left = rando.Next(700, 800);
+                Score++;
             }
             if(Star1.Left < -10)
             {
@@ -135,6 +141,7 @@ namespace Martian_Attack
             Star9.Left += starSpeed;
             Star10.Left += starSpeed;
         }
+      
 
         private void PipeUpOne_Click(object sender, EventArgs e)
         {
