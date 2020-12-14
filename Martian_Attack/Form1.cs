@@ -15,7 +15,7 @@ namespace Martian_Attack
         int gravity = 6;
         int PipeSpeed = -8;
         int Score = 0;
-
+        int starSpeed = -1;
 
         public Form1()
         {
@@ -71,7 +71,50 @@ namespace Martian_Attack
             {
                 PipeDownTwo.Left = rando.Next(700, 800);
             }
-
+            if(Star1.Left < -10)
+            {
+                Star1.Left = rando.Next(800, 900);
+            }
+            if (Star2.Left < -10)
+            {
+                Star2.Left = rando.Next(800, 900);
+            }
+            if (Star3.Left < -10)
+            {
+                Star3.Left = rando.Next(800, 900);
+            }
+            if (Star4.Left < -10)
+            {
+                Star4.Left = rando.Next(800, 900);
+            }
+            if (Star4.Left < -10)
+            {
+                Star4.Left = rando.Next(800, 900);
+            }
+            if (Star5.Left < -10)
+            {
+                Star5.Left = rando.Next(800, 900);
+            }
+            if (Star6.Left < -10)
+            {
+                Star6.Left = rando.Next(800, 900);
+            }
+            if (Star7.Left < -10)
+            {
+                Star7.Left = rando.Next(800, 900);
+            }
+            if (Star8.Left < -10)
+            {
+                Star8.Left = rando.Next(800, 900);
+            }
+            if (Star9.Left < -10)
+            {
+                Star9.Left = rando.Next(800, 900);
+            }
+            if (Star10.Left < -10)
+            {
+                Star10.Left = rando.Next(800, 900);
+            }
 
         }
 
@@ -81,6 +124,16 @@ namespace Martian_Attack
             PipeUpTwo.Left = PipeUpTwo.Left + PipeSpeed;
             PipeDownOne.Left = PipeDownOne.Left + PipeSpeed;
             PipeDownTwo.Left = PipeDownTwo.Left + PipeSpeed;
+            Star1.Left += starSpeed;
+            Star2.Left += starSpeed;
+            Star3.Left += starSpeed;
+            Star4.Left += starSpeed;
+            Star5.Left += starSpeed;
+            Star6.Left += starSpeed;
+            Star7.Left += starSpeed;
+            Star8.Left += starSpeed;
+            Star9.Left += starSpeed;
+            Star10.Left += starSpeed;
         }
 
         private void PipeUpOne_Click(object sender, EventArgs e)

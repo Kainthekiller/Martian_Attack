@@ -150,7 +150,7 @@ namespace Martian_Attack
             // Star4
             // 
             this.Star4.Image = global::Martian_Attack.Properties.Resources.Star;
-            this.Star4.Location = new System.Drawing.Point(184, 22);
+            this.Star4.Location = new System.Drawing.Point(125, 45);
             this.Star4.Margin = new System.Windows.Forms.Padding(2);
             this.Star4.Name = "Star4";
             this.Star4.Size = new System.Drawing.Size(30, 19);
@@ -172,7 +172,7 @@ namespace Martian_Attack
             // Star1
             // 
             this.Star1.Image = global::Martian_Attack.Properties.Resources.Star;
-            this.Star1.Location = new System.Drawing.Point(45, 122);
+            this.Star1.Location = new System.Drawing.Point(-1, 88);
             this.Star1.Margin = new System.Windows.Forms.Padding(2);
             this.Star1.Name = "Star1";
             this.Star1.Size = new System.Drawing.Size(30, 19);
@@ -183,7 +183,7 @@ namespace Martian_Attack
             // Star10
             // 
             this.Star10.Image = global::Martian_Attack.Properties.Resources.Star;
-            this.Star10.Location = new System.Drawing.Point(334, 88);
+            this.Star10.Location = new System.Drawing.Point(202, 5);
             this.Star10.Margin = new System.Windows.Forms.Padding(2);
             this.Star10.Name = "Star10";
             this.Star10.Size = new System.Drawing.Size(30, 19);
@@ -216,7 +216,7 @@ namespace Martian_Attack
             // Star6
             // 
             this.Star6.Image = global::Martian_Attack.Properties.Resources.Star;
-            this.Star6.Location = new System.Drawing.Point(455, 127);
+            this.Star6.Location = new System.Drawing.Point(562, 88);
             this.Star6.Margin = new System.Windows.Forms.Padding(2);
             this.Star6.Name = "Star6";
             this.Star6.Size = new System.Drawing.Size(30, 19);
@@ -227,7 +227,7 @@ namespace Martian_Attack
             // Star7
             // 
             this.Star7.Image = global::Martian_Attack.Properties.Resources.Star;
-            this.Star7.Location = new System.Drawing.Point(517, 17);
+            this.Star7.Location = new System.Drawing.Point(704, 153);
             this.Star7.Margin = new System.Windows.Forms.Padding(2);
             this.Star7.Name = "Star7";
             this.Star7.Size = new System.Drawing.Size(30, 19);
@@ -238,7 +238,7 @@ namespace Martian_Attack
             // Star9
             // 
             this.Star9.Image = global::Martian_Attack.Properties.Resources.Star;
-            this.Star9.Location = new System.Drawing.Point(610, 33);
+            this.Star9.Location = new System.Drawing.Point(620, 17);
             this.Star9.Margin = new System.Windows.Forms.Padding(2);
             this.Star9.Name = "Star9";
             this.Star9.Size = new System.Drawing.Size(30, 19);
@@ -249,7 +249,7 @@ namespace Martian_Attack
             // Star8
             // 
             this.Star8.Image = global::Martian_Attack.Properties.Resources.Star;
-            this.Star8.Location = new System.Drawing.Point(620, 97);
+            this.Star8.Location = new System.Drawing.Point(759, 88);
             this.Star8.Margin = new System.Windows.Forms.Padding(2);
             this.Star8.Name = "Star8";
             this.Star8.Size = new System.Drawing.Size(30, 19);
