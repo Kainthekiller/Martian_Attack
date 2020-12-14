@@ -117,12 +117,13 @@ namespace Martian_Attack
             // PipeUpOne
             // 
             this.PipeUpOne.Image = global::Martian_Attack.Properties.Resources.Pipe;
-            this.PipeUpOne.Location = new System.Drawing.Point(393, 277);
+            this.PipeUpOne.Location = new System.Drawing.Point(393, 258);
             this.PipeUpOne.Name = "PipeUpOne";
-            this.PipeUpOne.Size = new System.Drawing.Size(59, 173);
+            this.PipeUpOne.Size = new System.Drawing.Size(59, 192);
             this.PipeUpOne.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
             this.PipeUpOne.TabIndex = 13;
             this.PipeUpOne.TabStop = false;
+            this.PipeUpOne.Click += new System.EventHandler(this.PipeUpOne_Click);
             // 
             // pictureBox1
             // 
