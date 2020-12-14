@@ -63,9 +63,29 @@ namespace Martian_Attack.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap MyGround {
+            get {
+                object obj = ResourceManager.GetObject("MyGround", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap PhotoshopShip {
             get {
                 object obj = ResourceManager.GetObject("PhotoshopShip", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Pipe {
+            get {
+                object obj = ResourceManager.GetObject("Pipe", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
