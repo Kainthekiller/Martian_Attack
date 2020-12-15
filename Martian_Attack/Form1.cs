@@ -176,7 +176,7 @@ namespace Martian_Attack
             if(MainPlayer.Bounds.IntersectsWith(PipeDownOne.Bounds) ||
                 MainPlayer.Bounds.IntersectsWith(PipeDownTwo.Bounds)||
                 MainPlayer.Bounds.IntersectsWith(PipeUpOne.Bounds)||
-                MainPlayer.Bounds.IntersectsWith(PipeUpOne.Bounds))
+                MainPlayer.Bounds.IntersectsWith(PipeUpTwo.Bounds))
             {
                 EndGame();
             }
