@@ -229,12 +229,6 @@ namespace Martian_Attack
 
         }
 
-        private void MainMenuBtn_KeyPress(object sender, KeyPressEventArgs e)
-        {
-           
-                 
-           
-           
-        }
+        
     }
 }
