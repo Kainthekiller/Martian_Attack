@@ -16,7 +16,7 @@ namespace Martian_Attack
         int PipeSpeed = -8;
         int Score = 0;
         int starSpeed = -1;
-
+        int HighScores;
         public Form1()
         {
             InitializeComponent();
@@ -46,7 +46,9 @@ namespace Martian_Attack
             if(e.KeyCode == Keys.Space) { 
             
                 gravity = -10;
+                e.SuppressKeyPress = true;
             }
+            
 
           
         }
@@ -55,8 +57,11 @@ namespace Martian_Attack
         {
             if(e.KeyCode == Keys.Space)
             {
-                gravity = 6;
+                gravity = 6;  
+                
             }
+
+
 
         }
         public void Bounds()
@@ -175,10 +180,19 @@ namespace Martian_Attack
 
         public void EndGame()
         {
+            if(HighScores < Score)
+            {
+                HighScores = Score;
+            }
             GameTimer.Stop();
             GameOverLabel.Visible = true;
             MainMenuBtn.Visible = true;
             MainMenuBtn.Enabled = true;
+            ScoreLabel.Visible = false;
+            HighScore.Text = ($"Your Highest Score so far is {HighScores}");
+            FinalScore.Text = ($"Your Final Score is: {Score}");
+            FinalScore.Visible = true;
+            HighScore.Visible = true;
         }
 
         private void PipeUpOne_Click(object sender, EventArgs e)
@@ -198,25 +212,27 @@ namespace Martian_Attack
 
         private void MainMenuBtn_Click(object sender, EventArgs e)
         {
-          
-            
+            GameOverLabel.Visible = false;
+            MainMenuBtn.Visible = false;
+            FinalScore.Visible = false;
+            HighScore.Visible = false;
+            ScoreLabel.Visible = true;
+            gravity = 6;
+            PipeSpeed = -8;
+            Score = 0;
+            starSpeed = -1;
+            MainPlayer.Top = 180;
+            MainMenuBtn.Enabled = false;
+
+            GameTimer.Start();
+
 
         }
 
         private void MainMenuBtn_KeyPress(object sender, KeyPressEventArgs e)
         {
            
-                    GameOverLabel.Visible = false;
-                    MainMenuBtn.Visible = false;
-
-                    gravity = 6;
-                    PipeSpeed = -8;
-                    Score = 0;
-                    starSpeed = -1;
-                    MainPlayer.Top = 194;
-                    MainMenuBtn.Enabled = false;
-
-                    GameTimer.Start();
+                 
            
            
         }

@@ -50,6 +50,8 @@ namespace Martian_Attack
             this.Star8 = new System.Windows.Forms.PictureBox();
             this.GameOverLabel = new System.Windows.Forms.Label();
             this.MainMenuBtn = new System.Windows.Forms.Button();
+            this.FinalScore = new System.Windows.Forms.Label();
+            this.HighScore = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.PipeUpTwo)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.PipeDownOne)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.PipeDownTwo)).BeginInit();
@@ -264,7 +266,7 @@ namespace Martian_Attack
             // 
             this.GameOverLabel.AutoSize = true;
             this.GameOverLabel.Font = new System.Drawing.Font("Ravie", 65F, System.Drawing.FontStyle.Bold);
-            this.GameOverLabel.Location = new System.Drawing.Point(135, 152);
+            this.GameOverLabel.Location = new System.Drawing.Point(-9, 109);
             this.GameOverLabel.Name = "GameOverLabel";
             this.GameOverLabel.Size = new System.Drawing.Size(816, 116);
             this.GameOverLabel.TabIndex = 17;
@@ -274,14 +276,36 @@ namespace Martian_Attack
             // 
             // MainMenuBtn
             // 
-            this.MainMenuBtn.Location = new System.Drawing.Point(284, 241);
+            this.MainMenuBtn.Location = new System.Drawing.Point(284, 271);
             this.MainMenuBtn.Name = "MainMenuBtn";
             this.MainMenuBtn.Size = new System.Drawing.Size(308, 33);
             this.MainMenuBtn.TabIndex = 18;
-            this.MainMenuBtn.Text = "MainMenu";
+            this.MainMenuBtn.Text = "Click To Restart";
             this.MainMenuBtn.UseVisualStyleBackColor = true;
             this.MainMenuBtn.Visible = false;
-            this.MainMenuBtn.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.MainMenuBtn_KeyPress);
+            this.MainMenuBtn.Click += new System.EventHandler(this.MainMenuBtn_Click);
+            // 
+            // FinalScore
+            // 
+            this.FinalScore.AutoSize = true;
+            this.FinalScore.Font = new System.Drawing.Font("Ravie", 35F, System.Drawing.FontStyle.Bold);
+            this.FinalScore.Location = new System.Drawing.Point(46, 0);
+            this.FinalScore.Name = "FinalScore";
+            this.FinalScore.Size = new System.Drawing.Size(559, 62);
+            this.FinalScore.TabIndex = 19;
+            this.FinalScore.Text = "Your Final Score";
+            this.FinalScore.Visible = false;
+            // 
+            // HighScore
+            // 
+            this.HighScore.AutoSize = true;
+            this.HighScore.Font = new System.Drawing.Font("Ravie", 21.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.HighScore.Location = new System.Drawing.Point(-8, 350);
+            this.HighScore.Name = "HighScore";
+            this.HighScore.Size = new System.Drawing.Size(391, 39);
+            this.HighScore.TabIndex = 20;
+            this.HighScore.Text = "Your High Score is";
+            this.HighScore.Visible = false;
             // 
             // Form1
             // 
@@ -289,6 +313,8 @@ namespace Martian_Attack
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.DimGray;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.HighScore);
+            this.Controls.Add(this.FinalScore);
             this.Controls.Add(this.MainMenuBtn);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.PipeUpTwo);
@@ -355,6 +381,8 @@ namespace Martian_Attack
         private System.Windows.Forms.PictureBox PipeUpTwo;
         private System.Windows.Forms.Label GameOverLabel;
         private System.Windows.Forms.Button MainMenuBtn;
+        private System.Windows.Forms.Label FinalScore;
+        private System.Windows.Forms.Label HighScore;
     }
 }
 
