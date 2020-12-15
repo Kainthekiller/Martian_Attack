@@ -117,9 +117,9 @@ namespace Martian_Attack
             // PipeUpOne
             // 
             this.PipeUpOne.Image = global::Martian_Attack.Properties.Resources.Pipe;
-            this.PipeUpOne.Location = new System.Drawing.Point(393, 258);
+            this.PipeUpOne.Location = new System.Drawing.Point(393, 273);
             this.PipeUpOne.Name = "PipeUpOne";
-            this.PipeUpOne.Size = new System.Drawing.Size(59, 192);
+            this.PipeUpOne.Size = new System.Drawing.Size(59, 177);
             this.PipeUpOne.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
             this.PipeUpOne.TabIndex = 13;
             this.PipeUpOne.TabStop = false;
@@ -139,7 +139,7 @@ namespace Martian_Attack
             // 
             this.MainPlayer.BackColor = System.Drawing.Color.Transparent;
             this.MainPlayer.Image = global::Martian_Attack.Properties.Resources.PhotoshopShip;
-            this.MainPlayer.Location = new System.Drawing.Point(130, 122);
+            this.MainPlayer.Location = new System.Drawing.Point(55, 140);
             this.MainPlayer.Margin = new System.Windows.Forms.Padding(2);
             this.MainPlayer.Name = "MainPlayer";
             this.MainPlayer.Size = new System.Drawing.Size(40, 31);

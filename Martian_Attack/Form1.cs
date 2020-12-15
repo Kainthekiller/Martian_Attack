@@ -24,7 +24,7 @@ namespace Martian_Attack
 
         private void label1_Click(object sender, EventArgs e)
         {
-
+          
         }
 
         private void GameTimer_Tick(object sender, EventArgs e)
@@ -32,12 +32,16 @@ namespace Martian_Attack
             MainPlayer.Top = MainPlayer.Top + gravity;
             NewPipes();
             PipeMovement();
+            Bounds();
             ScoreLabel.Text = ($"Score: {Score}");
+            HitMarker();
 
         }
 
         private void Form1_KeyDown(object sender, KeyEventArgs e)
         {
+            
+
             if(e.KeyCode == Keys.Space) { 
             
                 gravity = -12;
@@ -52,7 +56,19 @@ namespace Martian_Attack
             }
 
         }
-        
+        public void Bounds()
+        {
+            if (MainPlayer.Top < 0)
+            {
+                MainPlayer.Top = 0;
+            }
+            else if (MainPlayer.Top > 355)
+            {
+                gravity = 0;
+            }
+             
+
+        }
 
         public void NewPipes()
         {
@@ -142,6 +158,23 @@ namespace Martian_Attack
             Star10.Left += starSpeed;
         }
       
+        public void HitMarker()
+        {
+            if(MainPlayer.Bounds.IntersectsWith(PipeDownOne.Bounds) ||
+                MainPlayer.Bounds.IntersectsWith(PipeDownTwo.Bounds)||
+                MainPlayer.Bounds.IntersectsWith(PipeUpOne.Bounds)||
+                MainPlayer.Bounds.IntersectsWith(PipeUpOne.Bounds))
+            {
+                EndGame();
+            }
+
+        }
+
+        public void EndGame()
+        {
+            GameTimer.Stop();
+            ScoreLabel.Text = "END Game";
+        }
 
         private void PipeUpOne_Click(object sender, EventArgs e)
         {
