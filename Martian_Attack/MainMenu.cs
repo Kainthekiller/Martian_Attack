@@ -15,14 +15,19 @@ namespace Martian_Attack
         public MainMenu()
         {
             InitializeComponent();
+            var player = new System.Media.SoundPlayer(@"C:\Users\phill\Documents\GitHub\Martian_Attack\Martian_Attack\Alien.wav");
+            player.PlayLooping();
+           
         }
 
         private void button1_Click(object sender, EventArgs e)
         {
+            
             this.Hide();
             Form1 F1 = new Form1();
             F1.ShowDialog();
             this.Close();
+            
         }
     }
 }

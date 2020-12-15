@@ -4,6 +4,7 @@ using System.ComponentModel;
 using System.Data;
 using System.Drawing;
 using System.Linq;
+using System.Media;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
@@ -17,10 +18,12 @@ namespace Martian_Attack
         int Score = 0;
         int starSpeed = -1;
         int HighScores;
+        SoundPlayer soundPlayer;
         public Form1()
         {
             InitializeComponent();
-            
+            soundPlayer = new SoundPlayer(@"C:\Users\phill\Documents\GitHub\Martian_Attack\Martian_Attack\Jump.wav");
+          
         }
 
         private void label1_Click(object sender, EventArgs e)
@@ -30,6 +33,7 @@ namespace Martian_Attack
 
         private void GameTimer_Tick(object sender, EventArgs e)
         {
+            
             MainPlayer.Top = MainPlayer.Top + gravity;
             NewPipes();
             PipeMovement();
@@ -43,8 +47,8 @@ namespace Martian_Attack
         {
             
 
-            if(e.KeyCode == Keys.Space) { 
-            
+            if(e.KeyCode == Keys.Space) {
+                soundPlayer.Play();
                 gravity = -10;
                 e.SuppressKeyPress = true;
             }
@@ -57,6 +61,7 @@ namespace Martian_Attack
         {
             if(e.KeyCode == Keys.Space)
             {
+                
                 gravity = 6;  
                 
             }
@@ -180,7 +185,9 @@ namespace Martian_Attack
 
         public void EndGame()
         {
-            if(HighScores < Score)
+            var player = new System.Media.SoundPlayer(@"C:\Users\phill\Documents\GitHub\Martian_Attack\Martian_Attack\Alien.wav");
+            player.PlayLooping();
+            if (HighScores < Score)
             {
                 HighScores = Score;
             }
