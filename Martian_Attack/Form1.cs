@@ -20,6 +20,7 @@ namespace Martian_Attack
         public Form1()
         {
             InitializeComponent();
+            
         }
 
         private void label1_Click(object sender, EventArgs e)
@@ -44,8 +45,10 @@ namespace Martian_Attack
 
             if(e.KeyCode == Keys.Space) { 
             
-                gravity = -12;
+                gravity = -10;
             }
+
+          
         }
 
         private void Form1_KeyUp(object sender, KeyEventArgs e)
@@ -173,12 +176,49 @@ namespace Martian_Attack
         public void EndGame()
         {
             GameTimer.Stop();
-            ScoreLabel.Text = "END Game";
+            GameOverLabel.Visible = true;
+            MainMenuBtn.Visible = true;
+            MainMenuBtn.Enabled = true;
         }
 
         private void PipeUpOne_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void label1_Click_1(object sender, EventArgs e)
+        {
+
+        }
+
+        private void PipeDownTwo_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void MainMenuBtn_Click(object sender, EventArgs e)
+        {
+          
+            
+
+        }
+
+        private void MainMenuBtn_KeyPress(object sender, KeyPressEventArgs e)
+        {
+           
+                    GameOverLabel.Visible = false;
+                    MainMenuBtn.Visible = false;
+
+                    gravity = 6;
+                    PipeSpeed = -8;
+                    Score = 0;
+                    starSpeed = -1;
+                    MainPlayer.Top = 194;
+                    MainMenuBtn.Enabled = false;
+
+                    GameTimer.Start();
+           
+           
         }
     }
 }

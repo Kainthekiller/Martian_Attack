@@ -48,6 +48,8 @@ namespace Martian_Attack
             this.Star7 = new System.Windows.Forms.PictureBox();
             this.Star9 = new System.Windows.Forms.PictureBox();
             this.Star8 = new System.Windows.Forms.PictureBox();
+            this.GameOverLabel = new System.Windows.Forms.Label();
+            this.MainMenuBtn = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.PipeUpTwo)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.PipeDownOne)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.PipeDownTwo)).BeginInit();
@@ -99,7 +101,7 @@ namespace Martian_Attack
             this.PipeDownOne.Image = global::Martian_Attack.Properties.Resources.Pipe;
             this.PipeDownOne.Location = new System.Drawing.Point(396, 0);
             this.PipeDownOne.Name = "PipeDownOne";
-            this.PipeDownOne.Size = new System.Drawing.Size(56, 153);
+            this.PipeDownOne.Size = new System.Drawing.Size(56, 141);
             this.PipeDownOne.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
             this.PipeDownOne.TabIndex = 15;
             this.PipeDownOne.TabStop = false;
@@ -107,19 +109,20 @@ namespace Martian_Attack
             // PipeDownTwo
             // 
             this.PipeDownTwo.Image = global::Martian_Attack.Properties.Resources.Pipe;
-            this.PipeDownTwo.Location = new System.Drawing.Point(562, 0);
+            this.PipeDownTwo.Location = new System.Drawing.Point(540, 0);
             this.PipeDownTwo.Name = "PipeDownTwo";
-            this.PipeDownTwo.Size = new System.Drawing.Size(53, 171);
+            this.PipeDownTwo.Size = new System.Drawing.Size(65, 141);
             this.PipeDownTwo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
             this.PipeDownTwo.TabIndex = 14;
             this.PipeDownTwo.TabStop = false;
+            this.PipeDownTwo.Click += new System.EventHandler(this.PipeDownTwo_Click);
             // 
             // PipeUpOne
             // 
             this.PipeUpOne.Image = global::Martian_Attack.Properties.Resources.Pipe;
-            this.PipeUpOne.Location = new System.Drawing.Point(393, 273);
+            this.PipeUpOne.Location = new System.Drawing.Point(396, 280);
             this.PipeUpOne.Name = "PipeUpOne";
-            this.PipeUpOne.Size = new System.Drawing.Size(59, 177);
+            this.PipeUpOne.Size = new System.Drawing.Size(59, 170);
             this.PipeUpOne.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
             this.PipeUpOne.TabIndex = 13;
             this.PipeUpOne.TabStop = false;
@@ -139,7 +142,7 @@ namespace Martian_Attack
             // 
             this.MainPlayer.BackColor = System.Drawing.Color.Transparent;
             this.MainPlayer.Image = global::Martian_Attack.Properties.Resources.PhotoshopShip;
-            this.MainPlayer.Location = new System.Drawing.Point(55, 140);
+            this.MainPlayer.Location = new System.Drawing.Point(11, 194);
             this.MainPlayer.Margin = new System.Windows.Forms.Padding(2);
             this.MainPlayer.Name = "MainPlayer";
             this.MainPlayer.Size = new System.Drawing.Size(40, 31);
@@ -257,17 +260,44 @@ namespace Martian_Attack
             this.Star8.TabIndex = 8;
             this.Star8.TabStop = false;
             // 
+            // GameOverLabel
+            // 
+            this.GameOverLabel.AutoSize = true;
+            this.GameOverLabel.Font = new System.Drawing.Font("Ravie", 65F, System.Drawing.FontStyle.Bold);
+            this.GameOverLabel.Location = new System.Drawing.Point(135, 152);
+            this.GameOverLabel.Name = "GameOverLabel";
+            this.GameOverLabel.Size = new System.Drawing.Size(816, 116);
+            this.GameOverLabel.TabIndex = 17;
+            this.GameOverLabel.Text = "Game Over !!!";
+            this.GameOverLabel.Visible = false;
+            this.GameOverLabel.Click += new System.EventHandler(this.label1_Click_1);
+            // 
+            // MainMenuBtn
+            // 
+            this.MainMenuBtn.Location = new System.Drawing.Point(284, 241);
+            this.MainMenuBtn.Name = "MainMenuBtn";
+            this.MainMenuBtn.Size = new System.Drawing.Size(308, 33);
+            this.MainMenuBtn.TabIndex = 18;
+            this.MainMenuBtn.Text = "MainMenu";
+            this.MainMenuBtn.UseVisualStyleBackColor = true;
+            this.MainMenuBtn.Visible = false;
+            this.MainMenuBtn.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.MainMenuBtn_KeyPress);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.DimGray;
             this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Controls.Add(this.PipeDownOne);
-            this.Controls.Add(this.PipeDownTwo);
+            this.Controls.Add(this.MainMenuBtn);
             this.Controls.Add(this.pictureBox1);
-            this.Controls.Add(this.MainPlayer);
+            this.Controls.Add(this.PipeUpTwo);
+            this.Controls.Add(this.PipeDownTwo);
+            this.Controls.Add(this.PipeUpOne);
+            this.Controls.Add(this.PipeDownOne);
             this.Controls.Add(this.ScoreLabel);
+            this.Controls.Add(this.GameOverLabel);
+            this.Controls.Add(this.MainPlayer);
             this.Controls.Add(this.Star4);
             this.Controls.Add(this.Star2);
             this.Controls.Add(this.Star1);
@@ -278,8 +308,6 @@ namespace Martian_Attack
             this.Controls.Add(this.Star7);
             this.Controls.Add(this.Star9);
             this.Controls.Add(this.Star8);
-            this.Controls.Add(this.PipeUpOne);
-            this.Controls.Add(this.PipeUpTwo);
             this.Name = "Form1";
             this.Text = "Martian Attack";
             this.KeyDown += new System.Windows.Forms.KeyEventHandler(this.Form1_KeyDown);
@@ -325,6 +353,8 @@ namespace Martian_Attack
         private System.Windows.Forms.PictureBox PipeDownTwo;
         private System.Windows.Forms.PictureBox PipeDownOne;
         private System.Windows.Forms.PictureBox PipeUpTwo;
+        private System.Windows.Forms.Label GameOverLabel;
+        private System.Windows.Forms.Button MainMenuBtn;
     }
 }
 
